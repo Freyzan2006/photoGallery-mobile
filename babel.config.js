@@ -7,13 +7,13 @@ module.exports = function (api) {
       ],
       plugins: [
         ["module-resolver", {
-          root: ["./"],
+          root: ["./src"],
           alias: {
-            "@": "./",
-            "@shared": "./shared",
+            "@": "./src",
+            "@shared": "./src/shared",
             "@assets": "./assets",
-            "@hooks": "./shared/hooks",
-            "@utils": "./shared/utils"
+            "@hooks": "./src/shared/hooks",
+            "@utils": "./src/shared/utils"
           }
         }]
       ]

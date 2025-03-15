@@ -1,9 +1,7 @@
-import { View, Text, Pressable } from "react-native";
+import { Pressable, Text, View } from "react-native";
 
 
-import "@shared/styles/global.css"
-
-function Card() {
+export const PhotoCard: React.FC = () => {
     return (
       <View className="m-4 p-4 bg-white rounded-lg shadow-md">
         <Text className="text-lg font-bold text-gray-800 mb-2">
@@ -27,12 +25,4 @@ function Card() {
         </View>
       </View>
     );
-}
-
-export default function Index() {
-  return (
-    <View>
-      <Card />
-    </View>
-  );
 }
