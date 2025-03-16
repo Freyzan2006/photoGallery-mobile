@@ -13,7 +13,9 @@ module.exports = function (api) {
             "@shared": "./src/shared",
             "@assets": "./assets",
             "@hooks": "./src/shared/hooks",
-            "@utils": "./src/shared/utils"
+            "@utils": "./src/shared/utils",
+            "@services": "./src/shared/services",
+            "@providers": "./src/shared/providers",
           }
         }]
       ]

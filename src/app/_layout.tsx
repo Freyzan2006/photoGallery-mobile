@@ -5,6 +5,8 @@ import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
 import { useColorScheme } from 'react-native';
 import '@shared/styles/global.css';
+import { QueryProvider } from '@/shared/providers/QueryProvider';
+import { Logo } from '@/shared/ui/Logo';
 require("react-native-reanimated")
 
 
@@ -28,11 +30,13 @@ export default function RootLayout() {
   }
 
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-      </Stack>
-      <Redirect href="/(tabs)/photo" />
-    </ThemeProvider>
+    <QueryProvider>
+      <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+        <Stack>
+          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        </Stack>
+        <Redirect href="/(tabs)/photo" />
+      </ThemeProvider>
+    </QueryProvider>
   );
 }

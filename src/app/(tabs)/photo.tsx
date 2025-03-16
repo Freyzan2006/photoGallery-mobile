@@ -1,6 +1,7 @@
+import { Photo } from "@/modules/photo/screens/Photo";
 
 
-import { Photo } from "@modules/photo/ui/screens/Photo";
+
 
 
 
